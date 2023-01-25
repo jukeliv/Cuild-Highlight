@@ -3,17 +3,26 @@
 	"name": "Cuild MakeFile",
 	"patterns": [
 		{
-			"include": "#reserved-words"
+			"include": "#types"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#punctuation"
 		}
 	],
 	"repository": {
-		"reserved-words": {
+		"types": {
 			"patterns": [{
 				"name": "keyword.control.cuild",
-				"match": "\\b(STD|FLAGS|FILES|CC|PROJ):\\b"
+				"match": "(STD|OBJS|FLAGS|FILES|CC|PROJ)\\b"
+			}]
+		},
+		"punctuation": {
+			"patterns": [{
+				"name": "keyword.control.cuild",
+				"match": "(:|,)\\b"
 			}]
 		},
 		"strings": {
