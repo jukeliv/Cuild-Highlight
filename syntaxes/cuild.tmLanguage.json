@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Cuild MakeFile",
+	"patterns": [
+		{
+			"include": "#reserved-words"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"reserved-words": {
+			"patterns": [{
+				"name": "keyword.control.cuild",
+				"match": "\\b(STD|FLAGS|FILES|CC|PROJ):\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.cuild",
+			"begin": ":",
+			"end": "\n",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cuild",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.CuildFile"
+}

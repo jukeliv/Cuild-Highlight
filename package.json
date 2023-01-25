@@ -1,0 +1,25 @@
+{
+  "name": "CuildFile",
+  "displayName": "Cuild MakeFile",
+  "description": "Simple C/C++ MakeFile made by JukeLiv on Github",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "cuild",
+      "aliases": ["Cuild", "cuild"],
+      "extensions": [".CuildFile"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "cuild",
+      "scopeName": "source.CuildFile",
+      "path": "./syntaxes/cuild.tmLanguage.json"
+    }]
+  }
+}
